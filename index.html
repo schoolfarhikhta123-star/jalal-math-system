@@ -5,40 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#101a35" />
     <title>سیستم آموزشی ریاضیات جلال</title>
-    <meta name="description" content="آموزش سرگرم‌کنندهٔ ریاضی به زبان دری برای شاگردان صنف‌های ۷ تا ۱۲" />
+    <meta name="description" content="برنامهٔ آموزشی ریاضی به زبان دری برای شاگردان صنف‌های ۷ تا ۱۲" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="page-shell">
       <header class="topbar">
-        <div class="brand-wrap">
-          <div class="brand-mark" aria-hidden="true">∑</div>
-          <div>
-            <p class="eyebrow">یاد بگیر، تمرین کن، پیشرفت کن</p>
-            <h1>سیستم آموزشی ریاضیات جلال</h1>
-          </div>
+        <a class="brand-wrap" href="#home" aria-label="صفحهٔ خانه">
+          <span class="brand-mark" aria-hidden="true">∑</span>
+          <span><span class="eyebrow">یاد بگیر، تمرین کن، پیشرفت کن</span><strong class="brand-name">ریاضیات جلال</strong></span>
+        </a>
+        <div class="top-actions">
+          <span class="student-chip" id="studentChip"></span>
+          <button class="small-btn" id="profileButton" type="button">پروفایل شاگرد</button>
         </div>
-        <nav class="class-tabs" id="classTabs" aria-label="انتخاب صنف"></nav>
       </header>
 
-      <section class="welcome panel">
+      <section class="welcome panel" id="home">
         <div>
           <p class="eyebrow">خوش آمدی، قهرمان ریاضی!</p>
-          <h2 id="welcomeTitle">از کدام بخش آغاز می‌کنی؟</h2>
-          <p class="welcome-copy">یک درس را انتخاب کن، مثال‌ها را بخوان و با بازی و کاربرگ مهارتت را بسنج.</p>
+          <h1 id="welcomeTitle">آمادهٔ یادگیری هستی؟</h1>
+          <p class="welcome-copy">یک شاخه را انتخاب کن، درس را بیاموز و با تمرین و بازی مهارتت را بسنج.</p>
         </div>
-        <div class="progress-card"><span class="progress-icon">★</span><span>امتیازهای تو</span><strong id="totalScore">۰</strong></div>
+        <div class="stats-row">
+          <div class="stat-card"><span>امتیاز</span><strong id="totalScore">۰</strong></div>
+          <div class="stat-card"><span>درس‌های تکمیل‌شده</span><strong id="completedCount">۰</strong></div>
+        </div>
       </section>
 
       <main class="main-layout">
         <aside class="sidebar panel">
-          <h2>شاخه‌های ریاضی</h2>
+          <div class="sidebar-heading"><h2>شاخه‌های ریاضی</h2><span id="gradeLabel" class="topic-chip"></span></div>
           <div id="subjectGrid" class="subject-grid"></div>
+          <p class="side-note">موضوعات هر شاخه بر اساس سطح صنف دسته‌بندی شده‌اند.</p>
         </aside>
         <section class="content panel" id="lessonPanel" aria-live="polite"></section>
       </main>
-      <footer class="site-footer">ساخته‌شده برای یادگیری ریاضی به زبان دری · نسخهٔ آموزشی در حال گسترش است</footer>
+      <footer class="site-footer">سیستم آموزشی ریاضیات جلال · پیشرفت در همین دستگاه ذخیره می‌شود.</footer>
     </div>
 
     <div id="modal" class="modal hidden" aria-hidden="true">
