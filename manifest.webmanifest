@@ -1,0 +1,12 @@
+{
+  "name": "سیستم آموزشی ریاضیات جلال",
+  "short_name": "ریاضیات جلال",
+  "lang": "fa-AF",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090e1f",
+  "theme_color": "#101a35",
+  "description": "آموزش ریاضی برای صنف‌های ۷ تا ۱۲"
+}

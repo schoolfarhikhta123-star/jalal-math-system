@@ -1,86 +1,53 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa-AF" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101a35" />
     <title>سیستم آموزشی ریاضیات جلال</title>
-    <meta
-      name="description"
-      content="سیستم آموزشی ریاضیات جلال برای صنف‌های 7 تا 12 با درس‌های حساب، الجبر، هندسه، مثلثات و ریاضیات عالی"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="description" content="آموزش سرگرم‌کنندهٔ ریاضی به زبان دری برای شاگردان صنف‌های ۷ تا ۱۲" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="page-shell">
       <header class="topbar">
         <div class="brand-wrap">
-          <div class="brand-mark">J</div>
+          <div class="brand-mark" aria-hidden="true">∑</div>
           <div>
-            <p class="eyebrow">سیستم آموزشی</p>
-            <h1>ریاضیات جلال</h1>
+            <p class="eyebrow">یاد بگیر، تمرین کن، پیشرفت کن</p>
+            <h1>سیستم آموزشی ریاضیات جلال</h1>
           </div>
         </div>
-        <nav class="class-tabs" id="classTabs"></nav>
+        <nav class="class-tabs" id="classTabs" aria-label="انتخاب صنف"></nav>
       </header>
+
+      <section class="welcome panel">
+        <div>
+          <p class="eyebrow">خوش آمدی، قهرمان ریاضی!</p>
+          <h2 id="welcomeTitle">از کدام بخش آغاز می‌کنی؟</h2>
+          <p class="welcome-copy">یک درس را انتخاب کن، مثال‌ها را بخوان و با بازی و کاربرگ مهارتت را بسنج.</p>
+        </div>
+        <div class="progress-card"><span class="progress-icon">★</span><span>امتیازهای تو</span><strong id="totalScore">۰</strong></div>
+      </section>
 
       <main class="main-layout">
         <aside class="sidebar panel">
-          <h2>شاخه‌های اصلی</h2>
+          <h2>شاخه‌های ریاضی</h2>
           <div id="subjectGrid" class="subject-grid"></div>
         </aside>
-
-        <section class="content panel" id="lessonPanel"></section>
+        <section class="content panel" id="lessonPanel" aria-live="polite"></section>
       </main>
+      <footer class="site-footer">ساخته‌شده برای یادگیری ریاضی به زبان دری · نسخهٔ آموزشی در حال گسترش است</footer>
     </div>
-
-    <template id="lessonTemplate">
-      <article class="lesson-card">
-        <div class="lesson-header">
-          <div>
-            <p class="lesson-tag">عنوان درس</p>
-            <h3 class="lesson-title"></h3>
-          </div>
-          <button class="small-btn primary" data-action="video">ویدیو</button>
-        </div>
-
-        <div class="course-spotlight">
-          <div class="concept-box">
-            <h4>تعریف</h4>
-            <p class="lesson-definition"></p>
-          </div>
-          <div class="concept-box">
-            <h4>توضیح</h4>
-            <p class="lesson-explanation"></p>
-          </div>
-        </div>
-
-        <div class="example-box">
-          <h4>مثال</h4>
-          <div class="example-list"></div>
-        </div>
-
-        <div class="media-actions">
-          <button class="small-btn" data-action="workbook">کاربرگ ۳۰ سوالی</button>
-          <button class="small-btn accent" data-action="quiz">بازی آموزشی</button>
-          <button class="small-btn ghost" data-action="print">چاپ</button>
-        </div>
-      </article>
-    </template>
 
     <div id="modal" class="modal hidden" aria-hidden="true">
       <div class="modal-backdrop" data-close="true"></div>
-      <div class="modal-content">
-        <button class="close-btn" data-close="true">×</button>
+      <section class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="close-btn" data-close="true" aria-label="بستن">×</button>
         <div id="modalBody"></div>
-      </div>
+      </section>
     </div>
-
     <script src="app.js"></script>
   </body>
 </html>
