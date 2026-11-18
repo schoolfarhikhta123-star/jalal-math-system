@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#101a35" />
     <title>سیستم آموزشی ریاضیات جلال</title>
-    <meta name="description" content="برنامهٔ آموزشی ریاضی به زبان دری برای شاگردان صنف‌های ۷ تا ۱۲" />
+    <meta name="description" content="آموزش تعاملی ریاضی به زبان دری برای شاگردان صنف‌های ۷ تا ۱۲" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -21,37 +21,17 @@
           <button class="small-btn" id="profileButton" type="button">پروفایل شاگرد</button>
         </div>
       </header>
-
       <section class="welcome panel" id="home">
-        <div>
-          <p class="eyebrow">خوش آمدی، قهرمان ریاضی!</p>
-          <h1 id="welcomeTitle">آمادهٔ یادگیری هستی؟</h1>
-          <p class="welcome-copy">یک شاخه را انتخاب کن، درس را بیاموز و با تمرین و بازی مهارتت را بسنج.</p>
-        </div>
-        <div class="stats-row">
-          <div class="stat-card"><span>امتیاز</span><strong id="totalScore">۰</strong></div>
-          <div class="stat-card"><span>درس‌های تکمیل‌شده</span><strong id="completedCount">۰</strong></div>
-        </div>
+        <div><p class="eyebrow">خوش آمدی، قهرمان ریاضی!</p><h1 id="welcomeTitle">آمادهٔ یادگیری هستی؟</h1><p class="welcome-copy">یک درس را انتخاب کن، مثال‌ها را بیاموز و با بازی و کاربرگ مهارتت را بسنج.</p></div>
+        <div class="stats-row"><div class="stat-card"><span>امتیاز</span><strong id="totalScore">۰</strong></div><div class="stat-card"><span>درس‌های تکمیل‌شده</span><strong id="completedCount">۰</strong></div></div>
       </section>
-
       <main class="main-layout">
-        <aside class="sidebar panel">
-          <div class="sidebar-heading"><h2>شاخه‌های ریاضی</h2><span id="gradeLabel" class="topic-chip"></span></div>
-          <div id="subjectGrid" class="subject-grid"></div>
-          <p class="side-note">موضوعات هر شاخه بر اساس سطح صنف دسته‌بندی شده‌اند.</p>
-        </aside>
+        <aside class="sidebar panel"><div class="sidebar-heading"><h2>شاخه‌های ریاضی</h2><span id="gradeLabel" class="topic-chip"></span></div><div id="subjectGrid" class="subject-grid"></div><p class="side-note">اکنون محتوای حساب صنف هفتم در حال تکمیل است.</p></aside>
         <section class="content panel" id="lessonPanel" aria-live="polite"></section>
       </main>
       <footer class="site-footer">سیستم آموزشی ریاضیات جلال · پیشرفت در همین دستگاه ذخیره می‌شود.</footer>
     </div>
-
-    <div id="modal" class="modal hidden" aria-hidden="true">
-      <div class="modal-backdrop" data-close="true"></div>
-      <section class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-        <button class="close-btn" data-close="true" aria-label="بستن">×</button>
-        <div id="modalBody"></div>
-      </section>
-    </div>
+    <div id="modal" class="modal hidden" aria-hidden="true"><div class="modal-backdrop" data-close="true"></div><section class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="close-btn" data-close="true" aria-label="بستن">×</button><div id="modalBody"></div></section></div>
     <script src="app.js"></script>
   </body>
 </html>
